@@ -1,0 +1,101 @@
+{% load staticfiles %} 
+<!DOCTYPE html>
+  <head>
+    <title>Inv. Operativa 3</title>
+    <meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <!-- 
+    Polygon Template
+    https://templatemo.com/tm-400-polygon
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}"  rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/templatemo_misc.css' %}">
+    <link href="{% static 'css/templatemo_style.css' %}" rel="stylesheet">
+
+    {% block apis %} 
+
+    {% endblock %}
+      
+    <script src="{% static 'js/jquery-1.10.2.min.js' %}"></script> 
+    <script src="{% static 'js/jquery.lightbox.js' %}"></script>
+    <script src="{% static 'js/templatemo_custom.js' %}"></script>
+    
+  </head>
+  <body>
+  	<div class="site-header">
+		<div class="main-navigation">
+			<div class="responsive_menu">
+				<ul>
+					<li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'about_us' %}">About us</a></li>
+          <li><a href="{% url 'our_team' %}">Our team</a></li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="row templatemo_gallerygap">
+					<div class="col-md-12 responsive-menu">
+						<a href="#" class="menu-toggle-btn">
+				            <i class="fa fa-bars"></i>
+				        </a>
+					</div> <!-- /.col-md-12 -->
+                    <div class="col-md-3 col-sm-12">
+                      <a href="{% url 'services' %}"><img src="{% static 'images/templatemo_logo.jpg' %}" alt="Polygon HTML5 Template"></a>
+                    </div>
+          <div class="col-md-9 main_menu">
+            <ul>
+              <li><a href="{% url 'services' %}">
+                              <span class="fa fa-cogs"></span>
+                              Services</a></li>
+              <li><a href="{% url 'about_us' %}">
+                              <span class="fa fa-envelope"></span>
+                                About us</a></li>
+              <li><a href="{% url 'our_team' %}" >
+                              <span class="fa fa-users"></span>
+                                Our team</a></li>
+						</ul>
+					</div> <!-- /.col-md-12 -->
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+		</div> <!-- /.main-navigation -->
+	</div> <!-- /.site-header -->
+  
+    <div id="menu-container">
+    {% block content %} 
+
+    {% endblock %}
+</div>
+
+      {% block footer %} 
+	<!-- footer start -->
+    <div class="templatemo_footer">
+    	<div class="container">
+    	<div class="row">
+        	<div class="col-md-9 col-sm-12">
+            	<span>Copyright &copy; 2020 UTN-MDP </span>
+          </div>
+      </div>
+      </div>
+    </div>
+    <!-- footer end -->  
+
+       {% endblock %}  
+<!-- 	<script>
+	$('.gallery_more').click(function(){
+		var $this = $(this);
+		$this.toggleClass('gallery_more');
+		if($this.hasClass('gallery_more')){
+			$this.text('Load More');			
+		} else {
+			$this.text('Load Less');
+		}
+	});
+    </script> -->
+	<!-- templatemo 400 polygon -->
+
+  </body>
+</html>

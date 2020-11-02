@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load staticfiles %} 
+
+{% block apis %} 
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
+{% endblock %}
+    
+
+{% block content %}
+
+<!-- result start -->
+    <div  style="margin-top: -100px;">
+    <div class="container" >
+     	<div class="row">
+        	<div class="col-md-4 col-sm-12">
+            	<div class="templatemo_contactmap">
+    			<div id="templatemo_map"></div>
+                <img src="{% static 'images/templatemo_contactiframe.png' %} " alt="contact map">
+                </div>
+                </div>
+            <div class="col-md-3 col-sm-9 leftalign" style="margin-left: 200px;">
+            	<div class="templatemo_contacttitle"></div>
+              <h2 style="text-align: center;">El recorrido total es de 2000 km</h2>
+                <div class="clear"></div>
+              
+                <div class="templatemo_address">
+                	<ul>
+                    <big><big>
+                	  <li class="left fa fa-map-marker"></li>
+                    <li class="right">Necochea - 150 km</li>
+                    <li class="clear"></li>
+                    <li class="left fa fa-map-marker"></li>
+                    <li class="right">Mar del Plata - 200 km</li>
+                    <li class="clear"></li>
+                    <li class="left fa fa-map-marker"></li>
+                    <li class="right">Pinamar - 150km</li>
+                    <li class="clear"></li>
+                    </big></big>
+                    
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="col-md-5 col-sm-12">
+            	<form role="form">
+              	<div class="templatemo_form">
+                	<input name="fullname" type="text" class="form-control" id="fullname" placeholder="Your Name" maxlength="40">
+              	</div>
+              	<div class="templatemo_form">
+                	<input name="email" type="text" class="form-control" id="email" placeholder="Your Email" maxlength="40">
+              	</div>
+               	<div class="templatemo_form">
+                	<input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" maxlength="40">
+              	</div>
+              	<div class="templatemo_form">
+	            	<textarea name="message" rows="10" class="form-control" id="message" placeholder="Message"></textarea>
+              	</div>
+              	<div class="templatemo_form"><button type="button" class="btn btn-primary">Send Message</button></div>
+            </form>
+            </div> -->
+        </div>
+    	
+    </div>
+    </div>
+    </div>
+    <!-- result end -->
+{% endblock %}
